@@ -20,8 +20,8 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Saad Pasta",
-  title: "Hi all, I'm Saad",
+  username: "Yiğit",
+  title: "Hi all, I'm Yiğit",
   subTitle: emoji(
     "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
   ),
@@ -374,7 +374,7 @@ const twitterDetails = {
   display: true // Set true to display this section, defaults to false
 };
 
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
   illustration,
