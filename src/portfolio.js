@@ -212,7 +212,7 @@ const achievementSection = {
       title: "HUPROG'22 Finalist",
       subtitle:
         "Being one of the top 15 teams in the qualification round, we entered the final round, and ended up 11th.",
-      image: require("./assets/images/acm.jpg"),
+      image: require("./assets/images/acm.png"),
       imageAlt: "ACM Hacettepe logo",
       footerLink: []
     },
