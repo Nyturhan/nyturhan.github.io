@@ -26,7 +26,7 @@ const greeting = {
     "A passionate Software Developer that wants to create impactful and game-changing projects."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1Cs-l6Efc0w6fvJLc0hp36aQ5Su6T1oO2/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
