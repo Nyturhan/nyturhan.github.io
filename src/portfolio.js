@@ -145,7 +145,7 @@ const workExperiences = {
       role: "Software Engineer Intern",
       company: "TÜRKSAT Bilişim",
       companylogo: require("./assets/images/turksat.png"),
-      date: "Aug 2015 - Sep 2015",
+      date: "Aug 2022 - Sep 2022",
       desc: "I was part of a team of new hires and interns that created a system for tracking car usage (requesting cars, who used car X between Y and Z date, how much distance did a personnel go, etc.) The mobile application we the interns created is used by the employees every day."
     }
   ]
