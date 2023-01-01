@@ -1,5 +1,10 @@
 @import "../../_globalColor";
 
+@font-face {
+  font-family: "myFont";
+  src: url("../../assets/fonts/Feelfree.ttf") format("truetype");
+}
+
 /*React-headroom*/
 .headroom-wrapper {
   max-height: 100px;
@@ -54,15 +59,14 @@
   display: block;
   flex: none;
   float: left;
-  font-size: 1.5em;
+  font-size: 2.3em;
   text-decoration: none;
   margin-top: 10px;
   line-height: normal;
 }
 
 .header .logo-name {
-  font-family: "Agustina Regular";
-  font-weight: bold;
+  font-family: "myFont";
   font-variant-ligatures: no-common-ligatures;
   -webkit-font-variant-ligatures: no-common-ligatures;
   padding: 0 10px;

@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "myFont";
+  src: url("../../assets/fonts/Feelfree.ttf") format("truetype");
+}
+
 .splash-container {
   display: flex;
   flex-direction: column;
@@ -15,8 +20,7 @@
   text-decoration: none;
 }
 .splash-title {
-  font-family: "Agustina Regular", cursive;
-  font-weight: bold;
+  font-family: "myFont";
   font-variant-ligatures: no-common-ligatures;
   -webkit-font-variant-ligatures: no-common-ligatures;
   padding: 0 20px;

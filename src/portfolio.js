@@ -10,7 +10,7 @@ import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your
 const splashScreen = {
   enabled: true, // set false to disable splash screen
   animation: splashAnimation,
-  duration: 2000 // Set animation duration as per your animation
+  duration: 1500 // Set animation duration as per your animation
 };
 
 // Summary And Greeting Section
@@ -20,10 +20,10 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Yiğit",
-  title: "Hi all, I'm Yiğit",
+  username: "nyturhan",
+  title: "Hey, I'm Yiğit",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
+    "A passionate Software Developer that wants to create impactful and game-changing projects."
   ),
   resumeLink:
     "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
@@ -33,13 +33,12 @@ const greeting = {
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7",
-  medium: "https://medium.com/@saadpasta",
-  stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
+  github: "https://github.com/Nyturhan",
+  linkedin: "https://www.linkedin.com/in/nyturhan/",
+  gmail: "nyturhan@gmail.com",
+  medium: "https://medium.com/@nyturhan",
+  stackoverflow: "https://stackoverflow.com/users/20905505/nyturhan",
+  instagram: "https://www.instagram.com/nyturhari/",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
@@ -49,15 +48,13 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "FULL STACK DEVELOPMENT WITH A PREFERENCE TOWARDS BACKEND",
   skills: [
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
+      "⚡ Develop interactive frontends for your web and mobile applications"
     ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
-    emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
-    )
+    emoji("⚙️ Create efficient backend applications"),
+    emoji("🚂 Integrate third party services such as Firebase,AWS...")
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -65,56 +62,36 @@ https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
-      skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
-    },
-    {
-      skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
-    },
-    {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
-    },
-    {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
-    },
-    {
-      skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
-    },
-    {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
-    },
-    {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
-    },
-    {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
-    },
-    {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
-    },
-    {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
-    },
-    {
       skillName: "python",
-      fontAwesomeClassname: "fab fa-python"
+      deviconClassname: "devicon-python-plain"
     },
     {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
+      skillName: "java",
+      deviconClassname: "devicon-java-plain"
+    },
+    {
+      skillName: "c++",
+      deviconClassname: "devicon-cplusplus-plain"
+    },
+    {
+      skillName: "flutter",
+      deviconClassname: "devicon-flutter-plain"
+    },
+    {
+      skillName: "django",
+      deviconClassname: "devicon-django-plain"
+    },
+    {
+      skillName: "mongoDB",
+      deviconClassname: "devicon-mongodb-plain"
+    },
+    {
+      skillName: "postgresql",
+      deviconClassname: "devicon-postgresql-plain"
+    },
+    {
+      skillName: "spring boot",
+      deviconClassname: "devicon-spring-plain"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -154,15 +131,15 @@ const techStack = {
   experience: [
     {
       Stack: "Frontend/Design", //Insert stack or technology you have experience in
-      progressPercentage: "90%" //Insert relative proficiency in percentage
+      progressPercentage: "40%" //Insert relative proficiency in percentage
     },
     {
       Stack: "Backend",
-      progressPercentage: "70%"
+      progressPercentage: "80%"
     },
     {
       Stack: "Programming",
-      progressPercentage: "60%"
+      progressPercentage: "70%"
     }
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
