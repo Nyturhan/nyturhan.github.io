@@ -147,6 +147,13 @@ const workExperiences = {
       companylogo: require("./assets/images/turksat.png"),
       date: "Aug 2022 - Sep 2022",
       desc: "I was part of a team of new hires and interns that created a system for tracking car usage (requesting cars, who used car X between Y and Z date, how much distance did personnel go, etc.) The mobile application we the interns created is used by the employees every day."
+    },
+    {
+      role: "Part-time Software Engineer",
+      company: "TechNarts",
+      companylogo: require("./assets/images/technarts.png"),
+      date: "Mar 2023 - Present",
+      desc: ""
     }
   ]
 };
@@ -305,7 +312,7 @@ const twitterDetails = {
   display: false // Set true to display this section, defaults to false
 };
 
-const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
   illustration,
