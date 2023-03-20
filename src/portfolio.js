@@ -153,7 +153,7 @@ const workExperiences = {
       company: "TechNarts",
       companylogo: require("./assets/images/technarts.png"),
       date: "Mar 2023 - Present",
-      desc: ""
+      desc: emoji("Still working here 😁")
     }
   ]
 };
