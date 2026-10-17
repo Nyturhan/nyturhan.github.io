@@ -18,7 +18,18 @@ npm run preview
 
 ## Deploy
 
-Pushes to `main` (and the redesign branch during rollout) run GitHub Actions, which builds the site and publishes the `dist/` folder to the `gh-pages` branch. Custom domain is set via [`public/CNAME`](public/CNAME) (`www.nyturhan.dev`).
+GitHub Pages serves the `gh-pages` branch. Custom domain: [`public/CNAME`](public/CNAME) (`www.nyturhan.dev`).
+
+**Required:** [`public/.nojekyll`](public/.nojekyll) — without it, GitHub’s Jekyll build ignores Astro’s `/_astro/` assets and the site ships unstyled.
+
+The Actions workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) should build on push to `main` and publish `dist/`. If that workflow shows **0 runs**, open [Actions → Build and Deploy](https://github.com/Nyturhan/nyturhan.github.io/actions/workflows/deploy.yml) while signed in and enable it (or use **Run workflow**). Until then, publish manually:
+
+```bash
+npm run build
+npx gh-pages -d dist -b gh-pages --dotfiles
+```
+
+(`--dotfiles` is required so `.nojekyll` is uploaded.)
 
 ### Content
 
@@ -27,11 +38,4 @@ Edit copy and timeline in [`src/content/site.ts`](src/content/site.ts).
 ### Domain / SSL note (Cloudflare)
 
 - `https://www.nyturhan.dev` serves the site.
-- Bare `https://nyturhan.dev` has returned **Cloudflare error 526** (invalid SSL certificate on the origin).
-
-To fix the apex in Cloudflare:
-
-1. Confirm DNS for `@` and `www` both point at GitHub Pages (A records `185.199.108–111.153` and/or the Pages CNAME), **or**
-2. Set SSL/TLS mode to **Full (Strict)** only if the origin presents a valid cert covering the hostname; for GitHub Pages, prefer **DNS only** (grey cloud) on the records that target GitHub, **or** use Cloudflare’s recommended GitHub Pages SSL setup so both apex and `www` terminate correctly.
-
-Until that is fixed, share `https://www.nyturhan.dev`.
+- Bare `https://nyturhan.dev` has returned **Cloudflare error 526** (invalid SSL certificate on the origin). Prefer DNS-only (grey cloud) for GitHub Pages records, or a valid Full (Strict) origin cert.
