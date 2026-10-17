@@ -1,0 +1,41 @@
+---
+import { skills } from "../content/site";
+---
+
+<section class="section" id="skills" aria-labelledby="skills-title">
+  <div class="wrap">
+    <p class="section__label">Toolkit</p>
+    <h2 class="section__title is-reveal" id="skills-title">Skills</h2>
+    <ul class="skills">
+      {skills.map((skill) => <li class="skills__item">{skill}</li>)}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .skills {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem 1.75rem;
+    max-width: 48rem;
+  }
+
+  .skills__item {
+    font-family: var(--font-ui);
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--ink);
+    position: relative;
+  }
+
+  .skills__item:not(:last-child)::after {
+    content: "·";
+    position: absolute;
+    right: -1.05rem;
+    color: var(--umber);
+    pointer-events: none;
+  }
+</style>

@@ -1,0 +1,104 @@
+---
+const links = [
+  { href: "#work", label: "Work" },
+  { href: "#featured", label: "Featured" },
+  { href: "#background", label: "Background" },
+  { href: "#skills", label: "Skills" },
+  { href: "#contact", label: "Contact" },
+];
+---
+
+<header class="nav">
+  <div class="nav__inner wrap">
+    <a class="nav__brand" href="#top">nyturhan</a>
+    <nav class="nav__links" aria-label="Primary">
+      {
+        links.map((link) => (
+          <a class="nav__link" href={link.href}>
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>
+
+<style>
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(10px);
+    background: rgba(234, 228, 216, 0.82);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 3.75rem;
+  }
+
+  .nav__brand {
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .nav__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.35rem 1.15rem;
+  }
+
+  .nav__link {
+    position: relative;
+    font-family: var(--font-ui);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--ink-muted);
+    text-decoration: none;
+  }
+
+  .nav__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.2rem;
+    width: 100%;
+    height: 1px;
+    background: var(--ink-blue);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s var(--ease);
+  }
+
+  .nav__link:hover,
+  .nav__link:focus-visible {
+    color: var(--ink);
+  }
+
+  .nav__link:hover::after,
+  .nav__link:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  @media (max-width: 640px) {
+    .nav__inner {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-block: 0.75rem;
+    }
+
+    .nav__links {
+      justify-content: flex-start;
+      gap: 0.5rem 1rem;
+    }
+  }
+</style>

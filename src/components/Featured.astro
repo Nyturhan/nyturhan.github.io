@@ -1,0 +1,101 @@
+---
+import { featured } from "../content/site";
+---
+
+<section class="section" id="featured" aria-labelledby="featured-title">
+  <div class="wrap">
+    <p class="section__label">Products</p>
+    <h2 class="section__title is-reveal" id="featured-title">Featured work</h2>
+    <div class="featured">
+      {
+        featured.map((project) => (
+          <article class="featured__item">
+            <p class="featured__eyebrow">{project.eyebrow}</p>
+            <h3 class="featured__name">{project.name}</h3>
+            <p class="featured__desc">{project.description}</p>
+            <a
+              class="featured__link"
+              href={project.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {project.linkLabel}
+              <span aria-hidden="true"> →</span>
+            </a>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .featured {
+    display: grid;
+    gap: 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  .featured__item {
+    display: grid;
+    grid-template-columns: minmax(8rem, 12rem) 1fr;
+    gap: 1rem 2.5rem;
+    padding-block: 2.25rem;
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+  }
+
+  .featured__eyebrow {
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--umber);
+    margin: 0.35rem 0 0;
+  }
+
+  .featured__name {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 1.4rem + 1.5vw, 2.4rem);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.75rem;
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .featured__desc {
+    margin: 0 0 1.25rem;
+    max-width: 48ch;
+    color: var(--ink-muted);
+    grid-column: 2;
+  }
+
+  .featured__link {
+    grid-column: 2;
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--ink-blue);
+    text-decoration: none;
+    width: fit-content;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 0.1rem;
+  }
+
+  .featured__link:hover {
+    color: var(--ink-blue-hover);
+  }
+
+  @media (max-width: 720px) {
+    .featured__item {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+
+    .featured__name,
+    .featured__desc,
+    .featured__link {
+      grid-column: 1;
+    }
+  }
+</style>
