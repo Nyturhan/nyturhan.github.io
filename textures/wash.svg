@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2400" viewBox="0 0 1600 2400" fill="none">
+  <defs>
+    <filter id="blur" x="-20%" y="-10%" width="140%" height="120%">
+      <feGaussianBlur stdDeviation="80"/>
+    </filter>
+  </defs>
+  <!-- Edge-biased wash — leaves the center reading column calm -->
+  <g filter="url(#blur)" opacity="0.35">
+    <ellipse cx="1500" cy="180" rx="280" ry="220" fill="#6B4E3D"/>
+    <ellipse cx="1550" cy="520" rx="200" ry="180" fill="#2A4B6E"/>
+    <ellipse cx="80" cy="900" rx="240" ry="200" fill="#6B4E3D"/>
+    <ellipse cx="40" cy="240" rx="180" ry="140" fill="#2A4B6E"/>
+    <ellipse cx="1520" cy="1600" rx="260" ry="220" fill="#2A4B6E"/>
+    <ellipse cx="60" cy="1900" rx="220" ry="180" fill="#6B4E3D"/>
+    <ellipse cx="1480" cy="2280" rx="240" ry="160" fill="#6B4E3D"/>
+  </g>
+</svg>

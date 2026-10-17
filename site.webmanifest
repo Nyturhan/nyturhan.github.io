@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "Yiğit Turhan",
+  "short_name": "nyturhan",
   "icons": [
     {
       "src": "/android-chrome-96x96.png",
@@ -8,7 +8,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#EAE4D8",
+  "background_color": "#EAE4D8",
   "display": "standalone"
 }
